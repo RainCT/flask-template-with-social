@@ -5,6 +5,10 @@ REQUIREMENTS:
  - Flask-Login
  - Flask-OAuth
 
+LICENSE:
+
+    ISC License - http://opensource.org/licenses/ISC
+
 TODO:
 
  * Look into using http://packages.python.org/Flask-Security/ instead

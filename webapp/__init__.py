@@ -1,22 +1,9 @@
 from flask import Flask, session, request
-import json
-import traceback
 
 from datamodel import *
+from settings import config
 
 app = Flask(__name__)
-
-def fatal(msg):
-    stars = '*' * len(msg)
-    print '\n%s\n%s\n%s\n' % (stars, msg, stars)
-    traceback.print_exc()
-    raise SystemExit
-
-try:
-    CONFIG_FILE = 'webapp/config.json'
-    config = json.load(open(CONFIG_FILE))
-except Exception:
-    fatal('Error parsing configuration file: %s' % CONFIG_FILE)
 
 app.secret_key = str(config['global']['secret_key'])
 app.config['SQLALCHEMY_DATABASE_URI'] = config['global']['database_uri']

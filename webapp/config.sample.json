@@ -4,7 +4,7 @@
         "database_uri": "db.sqlite"
     },
     "social": {
-        "faceboook": {
+        "facebook": {
             "key": "",
             "secret": ""
         },
