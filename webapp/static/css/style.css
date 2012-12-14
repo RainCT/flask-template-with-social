@@ -1,0 +1,44 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+footer {
+    margin-top: 10px;
+}
+#header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+#header a {
+    color: #333333;
+    display: block;
+    font-family: 'Courgette', cursive;
+    font-size: 72px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-shadow: 0 1px 0 #7C8F9C;
+    width: 300px;
+}
+#header a:hover {
+    text-decoration: none;
+}
+
+#header span{
+	color: #595959;
+	margin-left: 100px;
+}
+#apprstitle {
+	color: #333333;
+	font-family: 'Courgette', cursive;
+    font-size: 28px;
+}
+.container {
+    min-height: 400px;
+}
+.centerlogin {
+    text-align: center;
+}
+.rs {
+	font-size: larger;
+}

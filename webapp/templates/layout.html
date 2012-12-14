@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <title>Title</title>
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            {% if current_user.is_active() %}
+                <p>Hello, {{ current_user.display_name }}!</p>
+                <p><a href="{{ url_for('logout') }}">Log Out</a></p>
+            {% elif not request.path.startswith('/login') and not request.path.startswith('/signup') %}
+                <p><a href="{{ url_for('login') }}">Login</a></p>
+                <p><a href="{{ url_for('signup') }}">Join</a></p>
+            {% else %}
+                <p>Cool!</p>
+            {% endif %}
+        </header>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="message">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+        
+        <footer>
+            {% block footer %}
+            Your footer
+            {% endblock %}
+        </footer>
+    </body>
+</html>

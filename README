@@ -1,0 +1,18 @@
+REQUIREMENTS:
+
+ - Flask
+ - Flask-SQLAlchemy
+ - Flask-Login
+ - Flask-OAuth
+
+TODO:
+
+ * Look into using http://packages.python.org/Flask-Security/ instead
+     - http://packages.python.org/Flask-Security/quickstart.html
+
+ * Steal CRUDMixin from:
+     https://github.com/semirook/flask-kit/blob/master/base/models.py
+
+ * Steal common_form_field from: (?)
+     https://github.com/semirook/flask-kit/blob/master/base/templates/macros/form_helpers.html
+

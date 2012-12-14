@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="row span5 offset4">
+        <h3>Sign up</h3>
+    </div>
+    <div class="row span7 offset3">
+        <hr />
+        <p class="centerlogin">
+            {% macro social_login(provider_id, display_name) %}
+            <a class="btn btn-large" href="{{ url_for('social_login', provider=provider_id) }}">Login with {{ display_name }}</a>
+            {% endmacro %}
+            {{ social_login('facebook', 'Facebook') }}
+            {{ social_login('google', 'Google') }}
+            {{ social_login('twitter', 'Twitter') }}
+            <hr />
+        </p>
+        <p class="centerlogin">
+            If you don't want to sign up with a social account, <a class="btn-link" href="{{ url_for('signup_email') }}">sign up here</a>.
+        </p>
+    </div>
+{% endblock %}

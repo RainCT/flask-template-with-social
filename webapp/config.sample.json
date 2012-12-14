@@ -1,0 +1,20 @@
+{
+    "global": {
+        "secret_key": "sfo325mk2gk765m13",
+        "database_uri": "db.sqlite"
+    },
+    "social": {
+        "faceboook": {
+            "key": "",
+            "secret": ""
+        },
+        "google": {
+            "key": "",
+            "secret": ""
+        },
+        "twitter": {
+            "key": "",
+            "secret": ""
+        }
+    }
+}

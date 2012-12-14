@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="row span5 offset4">
+        <h3>Sign up</h3>
+        <hr />
+        <form class="from-horizontal" action="{{ url_for('signup_email') }}" method="POST" name="login_form">
+            {{ form.hidden_tag() }}
+            <div class="control-group">
+                {{ form.email.label(class="control-label") }}
+                <div class="controls">{{ form.email(placeholder="Email") }}</div>
+            </div>
+            <div class="control-group">
+                {{ form.password.label(class="control-label") }}
+                <div class="controls">{{ form.password(placeholder="Password") }}</div>
+            </div>
+            <!-- FIXME: remember me option -->
+            <div class="controls">
+                <input type="submit" value="Sign up" class="btn btn-primary" />
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+    <div class="row span7 offset3">
+        <hr />
+        <!--
+        <p class="centerlogin">
+            {% macro social_login(provider_id, display_name) %}
+            <a class="btn btn-large" href="{{ url_for('social_login', provider=provider_id) }}">Login with {{ display_name }}</a>
+            {% endmacro %}
+            {{ social_login('facebook', 'Facebook') }}
+            {{ social_login('google', 'Google') }}
+            {{ social_login('twitter', 'Twitter') }}
+            <hr />
+        </p>
+        -->
+        <p class="centerlogin">
+            Already have an account? <a class="btn btn-link" href="{{ url_for('login') }}">Login</a>
+        </p>
+    </div>
+{% endblock %}
